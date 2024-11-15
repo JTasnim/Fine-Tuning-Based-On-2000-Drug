@@ -12,7 +12,7 @@ This project aims to fine-tune an AI model using 2000 drug examples to classify 
 ## Installation
 
 ```bash
-        git clone https://github.com/yourusername/your-repo-name.git
+        git clone https://github.com/JTasnim/Fine-Tuning-Based-On-2000-Drug.git
 
         pip install openai pandas scikit-learn
 
