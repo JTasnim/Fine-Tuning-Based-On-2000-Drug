@@ -65,11 +65,9 @@ openai api fine_tunes.follow -i <JOB ID>
 
 ## Testing the Model
 
-Use test_model.py to evaluate the fine-tuned model. Here’s an example of how to test with sample drug names:
+Use test_fine_tuned_model.py to evaluate the fine-tuned model. Here’s an example of how to test with sample drug names:
 
-import openai
-
-## Replace with your fine-tuned model ID
+    import openai
 
     #Replace with your fine-tuned model ID
     model = "ada:ft-your-organization:drug-malady-data-YYYY-MM-DD-HH-MM-SS"
