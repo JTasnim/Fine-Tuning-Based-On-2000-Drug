@@ -21,31 +21,31 @@ This project aims to fine-tune an AI model using 2000 drug examples to classify 
 
 ## Data Preparation
 
-1 Convert Excel Data to JSONL Format
+1. Convert Excel Data to JSONL Format
 
-Run prepare_data.py to transform the drug data from Excel to JSONL format, suitable for fine-tuning:
+   Run prepare_data.py to transform the drug data from Excel to JSONL format, suitable for fine-tuning:
 
-json:
+   json:
 
-{"prompt": "Drug: <DRUG NAME>\\nMalady:", "completion": " <MALADY ID>"}
+   {"prompt": "Drug: <DRUG NAME>\\nMalady:", "completion": " <MALADY ID>"}
 
-2 Split Data into Training and Validation Sets
+2. Split Data into Training and Validation Sets
 
-Use divide_data.py to split the JSONL file into training (80%) and validation (20%) datasets.
+   Use divide_data.py to split the JSONL file into training (80%) and validation (20%) datasets.
 
 ## Fine-Tuning Process
 
-1 Prepare Data for Fine-Tuning
+1. Prepare Data for Fine-Tuning
 
-Analyze and prepare the data with OpenAI’s fine-tuning preparation tool:
+   Analyze and prepare the data with OpenAI’s fine-tuning preparation tool:
 
 ```bash
     openai tools fine_tunes.prepare_data -f data/drug_malady_data.jsonl
 ```
 
-2 Train the Model
+2. Train the Model
 
-Fine-tune the model with the prepared data:
+   Fine-tune the model with the prepared data:
 
 ```bash
 openai api fine_tunes.create \
@@ -55,9 +55,9 @@ openai api fine_tunes.create \
    --suffix "drug_malady_data"
 ```
 
-3 Monitor Training Progress
+3. Monitor Training Progress
 
-Track the fine-tuning job:
+   Track the fine-tuning job:
 
 ```bash
 openai api fine_tunes.follow -i <JOB ID>
